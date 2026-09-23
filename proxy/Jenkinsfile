@@ -17,7 +17,7 @@ pipeline {
         DB_IMAGE_UAT = 'nginx-flask-mysql-frontend-uat'
         DB_IMAGE_PROD = 'nginx-flask-mysql-frontend-prod'
 
-        BUILD_CONTEXT = './frontend'
+        BUILD_CONTEXT = './proxy'
 
         ECS_CLUSTER = 'Application-2-cluster'
 

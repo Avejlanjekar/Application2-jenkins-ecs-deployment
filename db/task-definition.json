@@ -14,32 +14,7 @@
           "appProtocol": "http"
         }
       ],
-      "essential": true,
-      "environment": [
-        {
-          "name": "MYSQL_DATABASE",
-          "value": "example"
-        },
-        {
-          "name": "MYSQL_ROOT_PASSWORD",
-          "value": "db-78n9n"
-        }
-      ],
-      "environmentFiles": [],
-      "mountPoints": [],
-      "volumesFrom": [],
-      "ulimits": [],
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/nginx-flask-mysql-db-dev",
-          "awslogs-create-group": "true",
-          "awslogs-region": "ap-south-1",
-          "awslogs-stream-prefix": "ecs"
-        },
-        "secretOptions": []
-      },
-      "systemControls": []
+      "essential": true
     }
   ],
   "family": "nginx-flask-mysql-db-dev",

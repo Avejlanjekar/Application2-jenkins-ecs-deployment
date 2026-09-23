@@ -19,7 +19,7 @@ pipeline {
 
         BUILD_CONTEXT = './db'
 
-        ECS_CLUSTER = 'nginx-flask-mysql-app-cluster'
+        ECS_CLUSTER = 'Application-2-cluster'
 
         ECS_SERVICE_DEV = 'nginx-flask-mysql-db-dev'
         ECS_SERVICE_QA = 'nginx-flask-mysql-db-qa'

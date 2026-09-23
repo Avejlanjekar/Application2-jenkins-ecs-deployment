@@ -303,6 +303,7 @@ def deployToECS(String taskDefinitionFile, String taskFamily, String ecsService)
     sh """
         sed -i 's/\\\${ENV}/${params.Environment}/g' ${taskDefinitionFile}
         sed -i 's/\\\${COMMIT_ID}/${env.GIT_COMMIT}/g' ${taskDefinitionFile}
+        sed -i 's/\\\${ENV}/${params.Environment}/g' proxy/conf
     """
 
     def taskRevision = sh(

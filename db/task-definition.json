@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "nginx-flask-mysql-db-dev-container",
-      "image": "288497659312.dkr.ecr.ap-south-1.amazonaws.com/nginx-flask-mysql-db-dev@sha256:4f9fdf87fa004e667f558d3cad7a1ad3484032ef944171a8686adeb734bb3d14",
+      "image": "288497659312.dkr.ecr.ap-south-1.amazonaws.com/nginx-flask-mysql-db-${ENV}:${COMMIT_ID}",
       "cpu": 0,
       "portMappings": [
         {

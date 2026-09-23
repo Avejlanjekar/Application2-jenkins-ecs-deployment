@@ -1,0 +1,53 @@
+{
+  "taskDefinitionArn": "arn:aws:ecs:ap-south-1:288497659312:task-definition/nginx-flask-mysql-db-dev:1",
+  "containerDefinitions": [
+    {
+      "name": "nginx-flask-mysql-db-dev-container",
+      "image": "288497659312.dkr.ecr.ap-south-1.amazonaws.com/nginx-flask-mysql-db-dev@sha256:4f9fdf87fa004e667f558d3cad7a1ad3484032ef944171a8686adeb734bb3d14",
+      "cpu": 0,
+      "portMappings": [
+        {
+          "containerPort": 3306,
+          "hostPort": 3306,
+          "protocol": "tcp",
+          "name": "nginx-flask-mysql-db-dev-container-3306-tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "essential": true,
+      "environment": [
+        {
+          "name": "MYSQL_DATABASE",
+          "value": "example"
+        },
+        {
+          "name": "MYSQL_ROOT_PASSWORD",
+          "value": "db-78n9n"
+        }
+      ],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "ulimits": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/nginx-flask-mysql-db-dev",
+          "awslogs-create-group": "true",
+          "awslogs-region": "ap-south-1",
+          "awslogs-stream-prefix": "ecs"
+        },
+        "secretOptions": []
+      },
+      "systemControls": []
+    }
+  ],
+  "family": "nginx-flask-mysql-db-dev",
+  "executionRoleArn": "arn:aws:iam::288497659312:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "512",
+  "memory": "1024"
+}

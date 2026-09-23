@@ -1,5 +1,4 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:ap-south-1:288497659312:task-definition/nginx-flask-mysql-db-dev:1",
   "containerDefinitions": [
     {
       "name": "nginx-flask-mysql-db-dev-container",

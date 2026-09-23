@@ -1,0 +1,48 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "nginx-flask-mysql-backend",
+      "image": "288497659312.dkr.ecr.ap-south-1.amazonaws.com/nginx-flask-mysql-backend-dev@sha256:44ea553f938ae72e01d8c59d2f1144fd4c8187e0d52163b11837a4fad9c9b686",
+      "cpu": 0,
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "hostPort": 8000,
+          "protocol": "tcp",
+          "name": "nginx-flask-mysql-backend-8000-tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "essential": true,
+      "environment": [
+        {
+          "name": "db-password",
+          "value": "db-78n9n"
+        }
+      ],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "ulimits": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/nginx-flask-mysql-backend",
+          "awslogs-create-group": "true",
+          "awslogs-region": "ap-south-1",
+          "awslogs-stream-prefix": "ecs"
+        },
+        "secretOptions": []
+      },
+      "systemControls": []
+    }
+  ],
+  "family": "nginx-flask-mysql-backend",
+  "executionRoleArn": "arn:aws:iam::288497659312:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "1024",
+  "memory": "3072"
+}

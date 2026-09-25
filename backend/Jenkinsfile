@@ -13,9 +13,9 @@ pipeline {
         ECR = 'ecr'
 
         BACKEND_IMAGE_DEV = 'app2-backend-dev'
-        BACKEND_IMAGE_QA = 'app2-backend-dev-qa'
-        BACKEND_IMAGE_UAT = 'app2-backend-dev-uat'
-        BACKEND_IMAGE_PROD = 'app2-backend-dev-prod'
+        BACKEND_IMAGE_QA = 'app2-backend-qa'
+        BACKEND_IMAGE_UAT = 'app2-backend-uat'
+        BACKEND_IMAGE_PROD = 'app2-backend-prod'
 
         BUILD_CONTEXT = './backend'
 
